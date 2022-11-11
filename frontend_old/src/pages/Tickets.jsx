@@ -3,7 +3,7 @@ import { FaSpinner } from "react-icons/fa"
 import {useSelector, useDispatch} from 'react-redux'
 import { getTickets } from "../features/tickets/ticketSlice"
 import Spinner from '../components/Spinner'
-import { BackButton } from "../components/BackButton"
+import { BackButton } from "../../../frontend/src/components/BackButton"
 import { reset } from "nodemon"
 
 

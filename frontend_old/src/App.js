@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "../../frontend/src/pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Header from './components/Header';
+import Header from '../../frontend/src/components/Header';
 import React from "react";
 import {ToastContainer} from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css";
