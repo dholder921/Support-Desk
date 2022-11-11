@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "../../frontend/src/pages/Home";
+import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Header from '../../frontend/src/components/Header';
+import Header from './components/Header';
 import React from "react";
 import {ToastContainer} from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css";
 //import { store } from "./app/store";
-import NewTicket from "./pages/NewTicket";
+import NewTicket from "../../frontend/src/pages/NewTicket";
 import Tickets from "./pages/Tickets";
 
 
