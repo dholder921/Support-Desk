@@ -32,7 +32,7 @@ useEffect(()=>{
     navigate('/')
   }
   dispatch(reset())
-}, [isError,isSuccess,user,message,navigate,dispatch,reset])
+}, [isError,isSuccess,user,message,navigate,dispatch])
 
 const onChange = (e) => {
   setFormData((prevState)=>({ ...prevState, [e.target.id]: e.target.value,}))
