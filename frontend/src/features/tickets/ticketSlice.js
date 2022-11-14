@@ -58,7 +58,7 @@ export const createTicket = createAsyncThunk(
 //Get user ticket
 export const getTickets = createAsyncThunk(
     "tickets/getAll",
-    async (_, thunkAPI) => {
+    async (_, thunkAPI) => {//the '_' is to pass nothing but still use the thunkAPI
         try {
             const token = thunkAPI.getState().auth.user.token
             return await ticketService.getTickets(token)
