@@ -13,7 +13,7 @@ function NewTicket() {
   const [product, setProduct] = useState("");
   const [description, setDescription] = useState("");
   const { isLoading, isError, isSuccess, message } = useSelector(
-    (state) => state.ticket
+    (state) => state.tickets
   );
 
   const dispatch = useDispatch();
@@ -24,8 +24,8 @@ function NewTicket() {
       toast.error(message);
     }
     if (isSuccess) {
-      dispatch(reset());
       navigate("/tickets");
+      dispatch(reset());
     }
 
     dispatch(reset());
