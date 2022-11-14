@@ -23,7 +23,9 @@ export default function App() {
             <Route path="/new-ticket" element={<PrivateRoute />} >
               <Route path="/new-ticket" element={<NewTicket />} />
             </Route>
-            <Route path="/tickets" element={<Tickets />} />
+            <Route path="/tickets" element={<PrivateRoute />} >
+              <Route path="/tickets" element={<Tickets />} />
+            </Route>
           </Routes>
         </div>
       </Router>
