@@ -17,7 +17,7 @@ export const ticketSlice = createSlice({
         reset: (state) => initialState
     },
     extraReducers: (builder) => {
-        /*builder
+        builder
         .addCase(createTicket.pending, (state)=> {
             state.isLoading = true
         }).addCase(createTicket.fulfilled, (state) => {
@@ -37,11 +37,11 @@ export const ticketSlice = createSlice({
             state.isLoading = false
             state.isError = true
             state.message = action.payload
-        })*/
+        })
     }
 })
-/*
-//create new ticket
+
+//Create new ticket
 export const createTicket = createAsyncThunk(
     "tickets/create",
     async (ticketData, thunkAPI) => {
@@ -68,7 +68,7 @@ export const getTickets = createAsyncThunk(
         }
     }
 );
-*/
+
 
 
 export const {reset} = ticketSlice.actions

@@ -12,31 +12,33 @@ function NewTicket() {
   const [email] = useState(user.email);
   const [product, setProduct] = useState("");
   const [description, setDescription] = useState("");
-
+  const { isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.ticket
+  );
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  /*useEffect(() => {
+  useEffect(() => {
     if (isError) {
       toast.error(message);
     }
     if (isSuccess) {
       dispatch(reset());
-      navigate("/ticket");
+      navigate("/tickets");
     }
 
     dispatch(reset());
-  }, [dispatch, isError, isSuccess, navigate, message, reset]);
-*/
+  }, [dispatch, isError, isSuccess, navigate, message]);
+
   const onSubmit = (e) => {
     e.preventDefault();
-    //dispatch(createTicket({ product, description }));
+    dispatch(createTicket({ product, description }));
   };
-/*
+
   if (isLoading) {
     return Spinner;
-  }*/
+  }
   return (
     <>
       <BackButton url="/" />
@@ -63,10 +65,10 @@ function NewTicket() {
               value={product}
               onChange={(e) => setProduct(e.target.value)}
             >
-              <option value="iphone">iPhone</option>
-              <option value="iphone">iMac</option>
-              <option value="iphone">iPad</option>
-              <option value="iphone">MacBookPro</option>
+              <option value="iPhone">iPhone</option>
+              <option value="iMac">iMac</option>
+              <option value="iPad">iPad</option>
+              <option value="MacBookPro">MacBookPro</option>
             </select>
           </div>
           <div className="form-group">
