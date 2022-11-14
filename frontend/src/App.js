@@ -8,6 +8,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import Header from '../src/components/Header';
 import NewTicket from "./pages/NewTicket";
 import Tickets from "./pages/Tickets";
+import Ticket from "./pages/Ticket";
 
 
 export default function App() {
@@ -25,6 +26,9 @@ export default function App() {
             </Route>
             <Route path="/tickets" element={<PrivateRoute />} >
               <Route path="/tickets" element={<Tickets />} />
+            </Route>
+            <Route path="/ticket/:ticketId" element={<PrivateRoute />} >
+              <Route path="/ticket/:ticketId" element={<Ticket />} />
             </Route>
           </Routes>
         </div>
