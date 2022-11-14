@@ -1,9 +1,6 @@
-import React from 'react'
-
+import React from "react";
 function NewTicket() {
-  return (
-    <div>NewTicket</div>
-  )
+  return <div>NewTicket</div>;
 }
 
-export default NewTicket
+export default NewTicket;
