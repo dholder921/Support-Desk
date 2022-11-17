@@ -6,7 +6,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import Modal from 'react-modal';
-import { getNotes, reset as notesReset } from "../features/notes/noteSlice";
+import { getNotes, reset as notesReset, createNote } from "../features/notes/noteSlice";
 import NoteItem from '../components/NoteItem'
 import { FaPlus } from "react-icons/fa";
 
@@ -57,7 +57,7 @@ function Ticket() {
 // Create note submit
 const onNoteSubmit = (e) =>{
   e.preventDefault()
-  toast.success('e.target.value')
+  dispatch(createNote({noteText, ticketId}))
   closeModal()
 }
 
